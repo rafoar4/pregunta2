@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -15,7 +15,7 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Listado de noticias</th>
+                <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>Link de mas informacion</th>
                 <th>Fecha</th>
@@ -23,7 +23,12 @@
         </thead>
         <tbody>
         <tr>
-            <tr th:each"news, info : ${list}"></tr>
+            <tr th:each="news, info : ${list}"></tr>
+                <td th:text="${info.index + 1}"></td>
+                <td th:text="${news.title}"></td>
+                <td th:text="${news.description}"></td>
+                <td th:text="${news.shareURL}"></td>
+                <td th:text="${news.feedDate}"></td>
         </tr>
 
         </tbody>

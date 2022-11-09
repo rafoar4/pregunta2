@@ -10,5 +10,14 @@ public class News {
     private String title;
     private String description;
     private String shareURL;
+    private String feedDate;
+    /*private Boolean content;
+    private String imgURL;
+    private String link;
+    private String sourceLink;
+    private String reactionsCount;
+    private String relatedCoins;
+    private String searchKeyWords;
+    private String source;  */
 
 }

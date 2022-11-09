@@ -15,7 +15,7 @@ public class NewsController {
     @GetMapping({"/list", "", "/"})
     public String list(Model model){
         model.addAttribute("list",newsDao.list());
-        return "news/list";
+        return "list";
     }
 
 }
