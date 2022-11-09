@@ -22,7 +22,7 @@ public class CoinDao {
     public List<Coin> list(){
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<News[]> response = restTemplate.getForEntity(
-                "https://api.coinstats.app/public/v1/coins/bitcoin?currency=AMD",News[].class
+                "https://api.coinstats.app/public/v1/coins?skip=0&limit=5&currency=EUR",News[].class
         );
         return (List<Coin>) response;
     }
